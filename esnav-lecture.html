@@ -870,51 +870,74 @@
   <div class="rtk-section">
     <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:24px;color:var(--accent-yellow);">ホクレンRTKとは</h3>
     <p style="color:var(--text-secondary);margin-bottom:24px;font-size:0.9rem;">
-      ホクレン農業協同組合連合会が北海道内の農家向けに提供するRTK-GNSS補正データ配信サービスです。
-      北海道各地に設置された基地局から、Ntrip（Networked Transport of RTCM via Internet Protocol）方式で
-      リアルタイム補正データを配信し、対応する自動操舵システムに&plusmn;2〜3cmの測位精度を提供します。
+      ホクレン農業協同組合連合会が<strong style="color:#22c55e;">2019年4月</strong>から稼働する、北海道内農家向けRTK-GNSS補正データ配信サービスです。
+      現在<strong style="color:#22c55e;">71JA</strong>に基地局を設置、利用ID数は<strong style="color:#22c55e;">7,258</strong>（2024年12月末現在）。
+      各基地局は半径約20kmをカバーし、Ntrip（Networked Transport of RTCM via Internet Protocol）方式で
+      リアルタイム補正データを配信。年間利用料は<strong style="color:#22c55e;">約1万円</strong>（従来の民間サービス約12万円から大幅削減）。
     </p>
+
+    <!-- KEY NUMBERS for RTK -->
+    <div class="overview-grid" style="margin-bottom:32px;">
+      <div class="overview-card" style="text-align:center;">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--accent-green);line-height:1;">71</div>
+        <div style="color:var(--text-secondary);font-size:0.8rem;margin-top:4px;">JA基地局数</div>
+      </div>
+      <div class="overview-card" style="text-align:center;">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--accent-blue);line-height:1;">7,258</div>
+        <div style="color:var(--text-secondary);font-size:0.8rem;margin-top:4px;">利用ID数（2024年末）</div>
+      </div>
+      <div class="overview-card" style="text-align:center;">
+        <div style="font-size:2.5rem;font-weight:800;color:var(--accent-yellow);line-height:1;">&plusmn;2cm</div>
+        <div style="color:var(--text-secondary);font-size:0.8rem;margin-top:4px;">20km圏内精度</div>
+      </div>
+      <div class="overview-card" style="text-align:center;">
+        <div style="font-size:2.2rem;font-weight:800;color:var(--accent-green);line-height:1;">~1万円<span style="font-size:0.7rem;font-weight:400;">/年</span></div>
+        <div style="color:var(--text-secondary);font-size:0.8rem;margin-top:4px;">年間利用料</div>
+      </div>
+    </div>
 
     <div class="rtk-grid">
       <div class="rtk-card">
         <h4>サービス概要</h4>
         <ul>
-          <li>北海道全域をカバーするRTK基地局ネットワーク</li>
-          <li>Ntrip方式でインターネット経由の補正データ配信</li>
-          <li>RTCM3.2フォーマット対応</li>
-          <li>24時間365日の安定運用</li>
-          <li>各JAを通じた契約・利用が可能</li>
+          <li>北海道内<span class="rtk-highlight">71JA</span>施設に基地局設置</li>
+          <li>各基地局は<span class="rtk-highlight">半径約20km</span>をカバー</li>
+          <li>Ntrip方式 + NMEA/RTCM3フォーマット対応</li>
+          <li>ホクレンがサーバーを一元管理・運用</li>
+          <li>各JAを通じた申込み（系統自主運営方式）</li>
+          <li>年間約1万円（従来12万円から92%削減）</li>
         </ul>
       </div>
       <div class="rtk-card">
-        <h4>利用に必要なもの</h4>
+        <h4>利用開始手順</h4>
         <ul>
-          <li>RTK対応GPS受信機（ESNav等の自動操舵システム）</li>
-          <li>携帯電話回線（4G/LTE）によるインターネット接続</li>
-          <li>Ntripクライアント設定（IP・ポート・マウントポイント）</li>
-          <li>ホクレンとの利用契約</li>
-          <li>SIMカード内蔵 or テザリング対応端末</li>
+          <li><span class="rtk-highlight">1.</span> Android端末を用意（Playストア+Gmail必須）</li>
+          <li><span class="rtk-highlight">2.</span> データ通信回線（SIM）を契約</li>
+          <li><span class="rtk-highlight">3.</span> 所属JAで利用申込み</li>
+          <li><span class="rtk-highlight">4.</span> PlayストアからホクレンRTKアプリをインストール</li>
+          <li><span class="rtk-highlight">5.</span> ユーザーID・PW・配信元ポート番号でログイン</li>
+          <li><span class="rtk-highlight">6.</span> ガイダンス機器でNtrip補正を有効化</li>
         </ul>
       </div>
       <div class="rtk-card">
-        <h4>ESNavでの接続手順</h4>
+        <h4>対応機器（確認済み）</h4>
         <ul>
-          <li>ESNav設定画面 &rarr; <span class="rtk-highlight">補正データ</span> メニューを開く</li>
-          <li>接続方式を <span class="rtk-highlight">Ntrip</span> に設定</li>
-          <li>サーバーIP・ポート番号・マウントポイントを入力</li>
-          <li>ユーザーID・パスワードを入力</li>
-          <li><span class="rtk-highlight">接続</span> &rarr; RTK FIXステータスを確認</li>
+          <li><span class="rtk-highlight">AgriBus</span>-NAVI / AutoSteer（正式対応）</li>
+          <li><span class="rtk-highlight">HOSAC</span> AG501 / AG502</li>
+          <li><span class="rtk-highlight">CHCNAV</span> NX510（中国製、100万円以下）</li>
+          <li><span class="rtk-highlight">ESNav</span>: Ntrip/RTCM3対応のため接続可能（要確認）</li>
+          <li>トラクター・田植機・スプレイヤー・コンバイン対応</li>
         </ul>
       </div>
       <div class="rtk-card">
-        <h4>精度と注意点</h4>
+        <h4>距離別の精度</h4>
         <ul>
-          <li>RTK FIX時: <span class="rtk-highlight">&plusmn;2〜3cm</span> の高精度</li>
-          <li>FLOAT時は精度低下（&plusmn;30cm程度）</li>
-          <li>基地局からの距離が離れると精度低下</li>
-          <li>携帯電波の受信状況に依存</li>
-          <li>山間部・谷間では精度が落ちる場合あり</li>
-          <li>FIXに要する時間: 通常1〜3分</li>
+          <li>基地局 <span class="rtk-highlight">20km以内</span>: &plusmn;2〜3cm（高精度）</li>
+          <li>基地局 <span class="rtk-highlight">約50km</span>: 95%が半径3cm以内</li>
+          <li>基地局 <span class="rtk-highlight">60km以上</span>: 誤差5cm超の可能性</li>
+          <li>晴れ・曇りはほぼ同等の精度</li>
+          <li>樹木周辺では誤差が<span class="rtk-highlight">約2倍</span>に増加</li>
+          <li>FIX完了まで通常1〜3分</li>
         </ul>
       </div>
     </div>
@@ -930,12 +953,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>精度</td><td>&plusmn;2〜3cm</td><td>&plusmn;6〜12cm</td><td>&plusmn;1〜2cm</td></tr>
-        <tr><td>月額費用</td><td>有（契約制）</td><td>無料</td><td>初期投資のみ</td></tr>
+        <tr><td>精度</td><td>&plusmn;2〜3cm</td><td>&plusmn;10〜30cm</td><td>&plusmn;1〜2cm</td></tr>
+        <tr><td>年間費用</td><td>約1万円</td><td>無料（衛星受信）</td><td>初期投資のみ（約250万円〜）</td></tr>
         <tr><td>通信環境</td><td>携帯電波必須</td><td>不要（衛星直受信）</td><td>UHF or WiFi</td></tr>
-        <tr><td>カバーエリア</td><td>北海道全域</td><td>日本全国</td><td>半径10〜15km</td></tr>
-        <tr><td>初期設定</td><td>Ntrip設定のみ</td><td>CLAS対応機が必要</td><td>基地局設置が必要</td></tr>
-        <tr><td>安定性</td><td>電波状況に依存</td><td>天候に強い</td><td>近距離で安定</td></tr>
+        <tr><td>カバーエリア</td><td>北海道71JA圏内</td><td>日本全国（山間部・海上含む）</td><td>半径10〜15km</td></tr>
+        <tr><td>導入コスト</td><td>低（Ntrip設定のみ）</td><td>低（CLAS対応機が必要）</td><td>高（基地局設置）</td></tr>
+        <tr><td>最適用途</td><td>精密農業・北海道特化</td><td>全国・携帯圏外</td><td>超高精度・近距離</td></tr>
       </tbody>
     </table>
 
@@ -1007,7 +1030,15 @@
     </div>
     <div class="overview-card">
       <div class="card-title">Q: ホクレンRTKの申込み方法は？</div>
-      <div class="card-text">所属のJA（農協）を通じてホクレンに申し込みます。利用契約後にNtrip接続情報が発行されます。</div>
+      <div class="card-text">所属のJA（農協）を通じて申込み。Android端末（Playストア+Gmail必須）とデータ通信SIMを用意。アプリインストール後、ユーザーID・PW・配信元ポート番号でログイン。年間約1万円。</div>
+    </div>
+    <div class="overview-card">
+      <div class="card-title">Q: ホクレンRTKの基地局から遠い場合は？</div>
+      <div class="card-text">20km以内で&plusmn;2〜3cm、50km地点でも95%が3cm以内の精度。60km以上では5cm超の誤差が出る場合あり。最寄りJAの基地局位置を確認しましょう。</div>
+    </div>
+    <div class="overview-card">
+      <div class="card-title">Q: ESNavはホクレンRTKに対応してる？</div>
+      <div class="card-text">ESNavはNtrip/RTCM3対応のため接続可能と推定されます。同じ中国製のCHCNAV NX510は実績あり。詳細はメーカーに要確認。</div>
     </div>
   </div>
 </div>
